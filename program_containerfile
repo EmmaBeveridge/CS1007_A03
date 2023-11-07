@@ -1,0 +1,8 @@
+FROM almalinux:latest
+ARG program_file_name
+ARG file_to_modify_path
+COPY ./programs/$program_file_name /
+RUN chmod +x /$program_file_name
+# Set the entrypoint to the script with CMD arguments
+ENTRYPOINT [/$program_file_name]
+#CMD [/volume/file_to_modify]
