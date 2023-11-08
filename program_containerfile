@@ -1,8 +1,27 @@
 FROM almalinux:latest
 ARG program_file_name
+ENV PROGRAM_FILE_NAME $program_file_name
 ARG file_to_modify_path
+ENV FILE_TO_MODIFY_PATH $file_to_modify_path
 COPY ./programs/$program_file_name /
 RUN chmod +x /$program_file_name
+#this works!
+#CMD bash /testProgram.sh
+
+
+#trying this
+#ENTRYPOINT [echo]
+#CMD [$program_file_name]
+
+#this works !!
+#CMD ["bash", "-c", "bash ${PROGRAM_FILE_NAME} ${FILE_TO_MODIFY_PATH}"]
+
+CMD ["bash", "-c", "./${PROGRAM_FILE_NAME} ${FILE_TO_MODIFY_PATH}"]
+
+#CMD whereis bash
+#RUN chmod +x /programs
+
 # Set the entrypoint to the script with CMD arguments
-ENTRYPOINT [/$program_file_name]
+#ENTRYPOINT ["testprogram.sh"]
 #CMD [/volume/file_to_modify]
+#CMD bash $program_file_name $file_to_modify_path

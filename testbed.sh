@@ -46,6 +46,7 @@ mkdir $result_dir_path
 
 while IFS= read -r program_file_name; do
     mkdir $result_dir_path/$program_file_name
+
     podman volume create "$program_file_name"
     program_volume_mount_point=$(podman volume inspect "$program_file_name" --format "{{.Mountpoint}}")
     
@@ -55,9 +56,14 @@ while IFS= read -r program_file_name; do
     podman build --build-arg=program_file_name="$program_file_name" --build-arg=file_to_modify_path="/volume/$file_to_modify_name" --file="/volume/program_containerfile" --tag="program.image"
     echo "Built image"
     #podman run --volume="$program_file_name:/volume" "program.image"
-    podman run --volume="$program_volume_mount_point:/volume" "program.image"
     
-    
+    container_name="$program_file_name.container"
+
+    podman run -d --rm --volume="$program_volume_mount_point:/volume" --name=$container_name "program.image" 
+    #container_ID=$(podman inspect "$container_name" --format "{{.Id}}")
+    while [[ "$(podman ps -a | grep $container_name)" ]]; do
+        podman stats "$container_name";
+    done
     echo "Copying $program_volume_mount_point/$file_to_modify_name ---> $result_dir_path/$program_file_name"
     cp -p $program_volume_mount_point/$file_to_modify_name $result_dir_path/$program_file_name
     echo "done $program_file_name"
