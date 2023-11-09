@@ -1,3 +1,4 @@
 FROM almalinux:latest
 RUN dnf install podman -y
+RUN dnf install jq -y
 CMD bash /volume/testbed.sh

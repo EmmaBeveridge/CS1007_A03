@@ -26,8 +26,8 @@ while IFS= read -r program_file_name; do
     podman build --build-arg=program_file_name="$program_file_name" --build-arg=file_to_modify_path="/volume/$file_to_modify_name" --file="/volume/program_containerfile" --tag="program.image" >>"$program_volume_mount_point/$log_file_name"
     container_name="$program_file_name.container"
 
-    
-
+    #podman info --format json | jq '. >> $program_volume_mount_point/$stats_dir_name/host_stats.txt
+    lscpu >> $program_volume_mount_point/$stats_dir_name/host_stats.txt #get host device stats
     for ((i = 0; i < 20; i++)); do
         stats_file_path=$program_volume_mount_point/$stats_dir_name/run_$i.csv
         echo "AverageCPU,MemoryPercentageUsed" > $stats_file_path                                                                    #Create file to write container resource usage statistics to
