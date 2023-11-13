@@ -27,20 +27,22 @@ while IFS= read -r program_file_name; do
     container_name="$program_file_name.container"
 
     #podman info --format json | jq '. >> $program_volume_mount_point/$stats_dir_name/host_stats.txt
+    echo "Host Machine Stats" >> $program_volume_mount_point/$stats_dir_name/host_stats.txt
     lscpu >> $program_volume_mount_point/$stats_dir_name/host_stats.txt #get host device stats
     for ((i = 0; i < 20; i++)); do
         stats_file_path=$program_volume_mount_point/$stats_dir_name/run_$i.csv
-        echo "AverageCPU,MemoryPercentageUsed" > $stats_file_path                                                                    #Create file to write container resource usage statistics to
+        echo "CPUNano,CPU,AvgCPU,MemPerc" > $stats_file_path #Create file to write container resource usage statistics to
+        #echo "Processes on host running for run $i">> $program_volume_mount_point/$stats_dir_name/host_stats.txt
+        
         podman run -d --rm --volume="$program_volume_mount_point:/volume" --name=$container_name "program.image" >>"$program_volume_mount_point/$log_file_name" #Run container in background (-d)
         while [[ "$(podman ps -a | grep $container_name)" ]]; do                                                                                                #collect stats while container is running
-            podman stats --format "{{.AVGCPU}},{{.MemPerc}}" --interval=1 "$container_name" 1>> "$stats_file_path" 2>/dev/null
+            podman stats --format "{{.CPUNano}},{{.CPU}},{{.AvgCPU}},{{.MemPerc}}" --interval=1 "$container_name" 1>> "$stats_file_path" 2>/dev/null
         done
-        echo "Completed $program_file_name run $i"
+        echo "Completed $program_file_name run $i" | tee -a "$program_volume_mount_point/$log_file_name"
     done
     echo "Copying $program_volume_mount_point/{$stats_dir_name, $log_file_name}  ---> $result_dir_path/$program_file_name" >>"$program_volume_mount_point/$log_file_name"
     cp -rp $program_volume_mount_point/$stats_dir_name $result_dir_path/$program_file_name
     cp -p $program_volume_mount_point/$log_file_name $result_dir_path/$program_file_name
-    echo "done $program_file_name"
 
 done <<<"$program_file_names"
 

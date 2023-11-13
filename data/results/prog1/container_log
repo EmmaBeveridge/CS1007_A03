@@ -1,0 +1,63 @@
+STEP 1/8: FROM almalinux:latest
+STEP 2/8: ARG program_file_name
+--> Using cache 5137d3457939bffa342f1441388acd76f254f3df636f6fd9c58c8ccd3d20324d
+--> 5137d345793
+STEP 3/8: ENV PROGRAM_FILE_NAME $program_file_name
+--> Using cache de77796fd23c09b912a46b7df75c074a822744f60de5f7e2cd7742707341c158
+--> de77796fd23
+STEP 4/8: ARG file_to_modify_path
+--> Using cache e11537fc42299b03be5b0c649299622e7eb49edcfcba8470951003455577fae7
+--> e11537fc422
+STEP 5/8: ENV FILE_TO_MODIFY_PATH $file_to_modify_path
+--> Using cache 5c6457dcc4f918e44eb99439455baa5d5bea65b235507198d1fb7a1e462ef3ac
+--> 5c6457dcc4f
+STEP 6/8: COPY ./programs/$program_file_name /
+--> 92383d4c2d3
+STEP 7/8: RUN chmod +x /$program_file_name
+--> 34605e4589a
+STEP 8/8: CMD ["bash", "-c", "./${PROGRAM_FILE_NAME} ${FILE_TO_MODIFY_PATH}"]
+COMMIT program.image
+--> d3ee905973f
+Successfully tagged localhost/program.image:latest
+d3ee905973f298eb41b5225362465200cf6e0808a5aa83edfe42eacdd5a4b573
+305ecdff65457d0f3e3f459442434ee3746f68e77308b69c9ec39ed019269f96
+Completed prog1 run 0
+d0151f9d811c7c8644a83297551be5f9088073cdf531f822fca1efd2f74356ed
+Completed prog1 run 1
+edddf69813d12ff6691ce685c00e4203bf588ca622521dcfc2bfdc6ed58a522f
+Completed prog1 run 2
+4a35de5d5700855e15ac52c8bd65205d62cf524e8bc4a143d8a18ac9e692447e
+Completed prog1 run 3
+ad06db62fc4302b5ffcbab4835bf68f590d0a00d09eedc12abceeea905a036d3
+Completed prog1 run 4
+4eff90e1467b4cdd5d49627296736c4449e286c8304de06ecb1df26d22823188
+Completed prog1 run 5
+50b96be7c5d846e76f8206cfa2c78439c8a251f3615d04c05547daa64938a0b0
+Completed prog1 run 6
+c4b7c59d11fd332a44dad130f75eb57f0feea01ca4b048bfc2936d8812f845e0
+Completed prog1 run 7
+2bc137fb13e8fa23bd1bea52cf6b50058534df96080c6f8e255e2d98727afaba
+Completed prog1 run 8
+8f3cfe84ec69d56371bf5390b00c6e38c9045f6fbae42d08d021c76e38c1a1a5
+Completed prog1 run 9
+5dfe82f93cd849b872ba7a096c56dac34bf7c3b2de584c0d775f66943429e3a2
+Completed prog1 run 10
+bb969f34a15be7adf5407297700a7dd170276165edf95c2f9504730d82ada8a9
+Completed prog1 run 11
+ee82f9036d2f4b8ddfa3c50a03e77ced20079d473754b7294a91e671eed6575a
+Completed prog1 run 12
+e2bb6c63578be5f69723787350353d301fa1a4a2da8e443d83bb8eec3bb58d82
+Completed prog1 run 13
+a0b7e1d9cd787a74a52b00351d921a76b18da1815ae25a88f1a212f26c7e24fe
+Completed prog1 run 14
+90e17f330b600ab9774d5e90a8834c36d105476249f59bdc49ee27d37264f1e7
+Completed prog1 run 15
+c86779e410b23b6d2fd891d069d3281a0ec4b1ca6072507060d65bff74bff7b9
+Completed prog1 run 16
+791e103496b575c295a5b501bdcfb8ad0ce4ea9e02436b310fa76d0dce52ff2f
+Completed prog1 run 17
+46a4d2155d0a1919797221fb428890345d77649d91b1789986ce0d9e114aefd5
+Completed prog1 run 18
+951543c907b57e88dce3efc635a76b3e6822a696c0db027f58df049e8f60520c
+Completed prog1 run 19
+Copying /var/lib/containers/storage/volumes/prog1/_data/{run_stats, container_log}  ---> /results/prog1
