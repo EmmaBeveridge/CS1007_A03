@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
 #called from cmdln, creates a testbed in a container
 #testbed runs other program files in nested containers by running testbed.sh
+
+while getopts 'm:d:' flag; do
+  case "${flag}" in
+    m) commit_message="${OPTARG}" ;;
+    d) pull_to_dir="${OPTARG}" ;;
+    *) print_usage
+       exit 1 ;;
+  esac
+done
+
+
 podman rm -f "testbed.container"
 podman system prune --volumes
 volume_name="testbed_volume"

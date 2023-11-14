@@ -1,10 +1,10 @@
-mean value of peak processing - interpolate for peak
+#mean value of peak processing - interpolate for peak
 run with limited processor power - effect on mean execution time --- stepwise increment- graph mean exe time
 spread by per second
 mean curve with error bars
 make run lines fainter and mean line bold
-mean peak memory usage
-peak mean vs overall mean
+#mean peak memory usage
+#peak mean vs overall mean
 candidates for descriptive of processor is mean usage and peak usage -set to just above/below mean and just above peak -compare execution time
 --most impactful for 2nd program
 change in execution time significant -- hypothesis test????

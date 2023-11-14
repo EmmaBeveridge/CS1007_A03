@@ -34,10 +34,16 @@ while IFS= read -r program_file_name; do
         echo "CPUNano,CPU,AvgCPU,MemPerc" > $stats_file_path #Create file to write container resource usage statistics to
         #echo "Processes on host running for run $i">> $program_volume_mount_point/$stats_dir_name/host_stats.txt
         
-        podman run -d --rm --volume="$program_volume_mount_point:/volume" --name=$container_name "program.image" >>"$program_volume_mount_point/$log_file_name" #Run container in background (-d)
-        while [[ "$(podman ps -a | grep $container_name)" ]]; do                                                                                                #collect stats while container is running
+        podman run -d --volume="$program_volume_mount_point:/volume" --name=$container_name "program.image" >>"$program_volume_mount_point/$log_file_name" #Run container in background (-d)
+        while [[ "$(podman ps --filter "status=exited" | grep $container_name)" ]]; do                                                                                                #collect stats while container is running
             podman stats --format "{{.CPUNano}},{{.CPU}},{{.AvgCPU}},{{.MemPerc}}" --interval=1 "$container_name" 1>> "$stats_file_path" 2>/dev/null
         done
+        start=$(podman inspect $container_name --type container --format "{{.State.StartedAt}}")
+        start_seconds=$(date --date "$(echo $start | sed 's;[A-Z];;g')" +"%s.%3N")
+        finish=$(podman inspect $container_name --type container --format "{{.State.FinishedAt}}")
+        finish_seconds=$(date --date "$(echo $finish | sed 's;[A-Z];;g')" +"%s.%3N")
+        execution_time=$(($finish_seconds-$start_seconds))
+        podman rm $container_name
         echo "Completed $program_file_name run $i" | tee -a "$program_volume_mount_point/$log_file_name"
     done
     echo "Copying $program_volume_mount_point/{$stats_dir_name, $log_file_name}  ---> $result_dir_path/$program_file_name" >>"$program_volume_mount_point/$log_file_name"
