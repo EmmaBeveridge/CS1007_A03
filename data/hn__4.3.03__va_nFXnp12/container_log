@@ -1,0 +1,164 @@
+STEP 1/8: FROM almalinux:latest
+STEP 2/8: ARG program_file_name
+--> 7070976176bd
+STEP 3/8: ENV PROGRAM_FILE_NAME $program_file_name
+--> 14d1e3fd5f1e
+STEP 4/8: ARG file_to_modify_path
+--> dd30545eab74
+STEP 5/8: ENV FILE_TO_MODIFY_PATH $file_to_modify_path
+--> 78bd8873833d
+STEP 6/8: COPY ./programs/$program_file_name /
+--> e44e39c3e94f
+STEP 7/8: RUN chmod +x /$program_file_name
+--> 0ba743992835
+STEP 8/8: CMD ["bash", "-c", "./${PROGRAM_FILE_NAME} ${FILE_TO_MODIFY_PATH}"]
+COMMIT program.image
+--> bf58194cdba9
+Successfully tagged localhost/program.image:latest
+bf58194cdba9ef55407907fde242646c595a5e37a28b9fcbd4c8f593f9c95140
+049b41d00b38f91e7a1b134b9d493d40570f0d87abb3439b6c921fb5e610e1f1
+Completed hn__4.3.03__va_nFXnp12 run 0
+00c292d214239bd3695dc9c78d69400d1d468cda47c11a17120b100c2b650b6a
+Completed hn__4.3.03__va_nFXnp12 run 1
+4786c149cb2ff066baf800f24e2dc2ce5a78cfae00a9d09b2d9fd77afb725dda
+Completed hn__4.3.03__va_nFXnp12 run 2
+8c509329b55ac071f46b593802f334c42a4f2afba6b8325f19ed1a9bc472c915
+Completed hn__4.3.03__va_nFXnp12 run 3
+34e6d388a47dac93fb258b5c47247c3dc8e8c8194518e118dab0073110b5a9f7
+Completed hn__4.3.03__va_nFXnp12 run 4
+4b51b1098759a317c68236f427979fda769902f280cff0aca5ea11201c572def
+Completed hn__4.3.03__va_nFXnp12 run 5
+396cb6f0e3b04db0d07c334ba470e06e4ea12574769331c244d881d2317128a7
+Completed hn__4.3.03__va_nFXnp12 run 6
+8a93884c25dbf509ae1e7e7ee55592e870a6aaad0e5499eb6d2e612a79ce0eda
+Completed hn__4.3.03__va_nFXnp12 run 7
+c6959e5ff0245b3aec417b642adb2b2f698b5ccbf691b15fb64ea25db89eaddf
+Completed hn__4.3.03__va_nFXnp12 run 8
+9b946beb0fcdbe9bb59681e58a3309e3bb135dd8b0967f8c70f97736d4ac5767
+Completed hn__4.3.03__va_nFXnp12 run 9
+588a83a04c8a53d470c1865d44a2d2fe77306fca88bd2123f05407084492b305
+Completed hn__4.3.03__va_nFXnp12 run 10
+bbd7b3b0874a405b8cc9c6733683d379673df3b7aa4ae01045a458cfd3fa2bd5
+Completed hn__4.3.03__va_nFXnp12 run 11
+17389b04c59d5ff273f114bcdea7ff973b5a8b0eb0f60cffc57bec4645d113a5
+Completed hn__4.3.03__va_nFXnp12 run 12
+c18ffd81592332a58116e8bd87aa5a1799a0b913db3a49079fff7389bd007bc0
+Completed hn__4.3.03__va_nFXnp12 run 13
+f8648e4a5e8e284c96262021436eb0a3da6b3ad4722fc1d8e2a9b1eb20c70917
+Completed hn__4.3.03__va_nFXnp12 run 14
+5bd2df8a2c8e8cce73efa4129dcc030d42c41408a50ed94c276af5eec0128d39
+Completed hn__4.3.03__va_nFXnp12 run 15
+1c6fe30236a0f7f22d13522b409dd5d28385d27fa594aba81275f510d5961b54
+Completed hn__4.3.03__va_nFXnp12 run 16
+c0b1c6cb7b0dbc56d30e285627e694434c1421b92c5a0fc0e75a557c5df04cc7
+Completed hn__4.3.03__va_nFXnp12 run 17
+9fea0ff3ade82076cd17121951d3d02b140b76f60abc5ab8e3c7bf465806b904
+Completed hn__4.3.03__va_nFXnp12 run 18
+1e45f9cfc3bfb774768ca7231306b095f90499caf06573dcd98f1e38cc66702b
+Completed hn__4.3.03__va_nFXnp12 run 19
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.00
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.00
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.00
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.05
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.05
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.05
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.10
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.10
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.10
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.15
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.15
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.15
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.20
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.20
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.20
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.25
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.25
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.25
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.30
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.30
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.30
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.35
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.35
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.35
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.40
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.40
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.40
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.45
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.45
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.45
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.50
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.50
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.50
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.55
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.55
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.55
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.60
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.60
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.60
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.65
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.65
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.65
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.70
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.70
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.70
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.75
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.75
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.75
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.80
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.80
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.80
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.85
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.85
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.85
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.90
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.90
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.90
+Completed hn__4.3.03__va_nFXnp12 run 0 at 2.95
+Completed hn__4.3.03__va_nFXnp12 run 1 at 2.95
+Completed hn__4.3.03__va_nFXnp12 run 2 at 2.95
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.00
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.00
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.00
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.05
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.05
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.05
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.10
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.10
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.10
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.15
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.15
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.15
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.20
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.20
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.20
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.25
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.25
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.25
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.30
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.30
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.30
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.35
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.35
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.35
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.40
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.40
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.40
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.45
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.45
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.45
+Completed hn__4.3.03__va_nFXnp12 run 0 at 3.50
+Completed hn__4.3.03__va_nFXnp12 run 1 at 3.50
+Completed hn__4.3.03__va_nFXnp12 run 2 at 3.50
+Completed hn__4.3.03__va_nFXnp12 run 0 at 0
+Completed hn__4.3.03__va_nFXnp12 run 1 at 0
+Completed hn__4.3.03__va_nFXnp12 run 2 at 0
+Completed hn__4.3.03__va_nFXnp12 run 0 at 100
+Completed hn__4.3.03__va_nFXnp12 run 1 at 100
+Completed hn__4.3.03__va_nFXnp12 run 2 at 100
+Completed hn__4.3.03__va_nFXnp12 run 0 at 200
+Completed hn__4.3.03__va_nFXnp12 run 1 at 200
+Completed hn__4.3.03__va_nFXnp12 run 2 at 200
+Completed hn__4.3.03__va_nFXnp12 run 0 at 300
+Completed hn__4.3.03__va_nFXnp12 run 1 at 300
+Completed hn__4.3.03__va_nFXnp12 run 2 at 300
+Copying /var/lib/containers/storage/volumes/hn__4.3.03__va_nFXnp12/_data/{run_stats, container_log}  ---> /results/hn__4.3.03__va_nFXnp12

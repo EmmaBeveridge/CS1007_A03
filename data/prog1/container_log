@@ -1,0 +1,581 @@
+STEP 1/8: FROM almalinux:latest
+STEP 2/8: ARG program_file_name
+--> 2ad6fa97f510
+STEP 3/8: ENV PROGRAM_FILE_NAME $program_file_name
+--> e5f2296799c2
+STEP 4/8: ARG file_to_modify_path
+--> b9aa3b1db646
+STEP 5/8: ENV FILE_TO_MODIFY_PATH $file_to_modify_path
+--> 54d4e73d17a7
+STEP 6/8: COPY ./programs/$program_file_name /
+--> 813874e03e76
+STEP 7/8: RUN chmod +x /$program_file_name
+--> f80e91ab1211
+STEP 8/8: CMD ["bash", "-c", "./${PROGRAM_FILE_NAME} ${FILE_TO_MODIFY_PATH}"]
+COMMIT program.image
+--> 86fffc6679ed
+Successfully tagged localhost/program.image:latest
+86fffc6679ed49999df5316c43ab77c90999c7f12ec01845e7c6a54b56d266d7
+44884cccae7dd914164df56823271f53bd15560e98976af302a4397b40a4e8f0
+Completed prog1 run 0
+deabd3bc86bc10e9917dc53a6573a53644ceac8bf21bc4949bdd2acc6212e65e
+Completed prog1 run 1
+870be6c51479c3c8e9a745a464f25a94a04bc8eff93a077411b31df773e3fbed
+Completed prog1 run 2
+ea7927c78cc09fb02c5c711f9e14bf25661dd92529b3cbb055e6a3070de7d660
+Completed prog1 run 3
+7cdd1463b8995f4a01ad55c80450a9462ad85c76a24069b0185ef51a5d703bb1
+Completed prog1 run 4
+47bf97b4f54039b80f696f9fe047651e5671acd9ad4c9a8824579a3382641dea
+Completed prog1 run 5
+f6f97847d5b4311c847e175c8750d09a34eb7a92392fa84568f5579bddf23e30
+Completed prog1 run 6
+5ae0ce4e4be527faf7c62c9946bfb48c4d775bb89ec9873033faecba79b5033b
+Completed prog1 run 7
+074025cb58070cf38daf851b4f5f17acc41472c0c833424f2c70d4cb94da742d
+Completed prog1 run 8
+04207a7149e5dacefede45994ef3754786dfa9f79e3ac690ba79b864d7ece4ef
+Completed prog1 run 9
+9384f3460be4aa77384ecbf22cb7471fc94a976736fcc9592032a206cd289b86
+Completed prog1 run 10
+2645078c03a7816105f9dbd4d2843e4d91603da24e2ad8ca0714c8f7227d63cf
+Completed prog1 run 11
+78f270095b60f6fafab13bfcd36b3be8539129e98ce61372357f55abca734eae
+Completed prog1 run 12
+038d4433831a9b49287bca39611f77bf7402be3158eb3aab0a111187de8c4224
+Completed prog1 run 13
+e1d75ad758bfc98acda0b2f2046fb3dca043e6e1c3319ccfe8fe542193874779
+Completed prog1 run 14
+5c3ee913d91411efe7f809db5a7df5784c35f5dc4b84e7be79ef407299d18033
+Completed prog1 run 15
+0a1ec004ed3e31582bf20526a6b8864e22dfa928c0b79094c8864130c39edf6d
+Completed prog1 run 16
+7e5582879597e441a01b02e1b52e80bb705c3abbe3a413dc87447325723324cb
+Completed prog1 run 17
+31491e9467f73a486626835eba38d09d0d1b58a1613d516015ac4293c3985977
+Completed prog1 run 18
+496c0c35e6554bb4d3b30b852c777ad41d3adc6f2565de4f1b982fc5e4f61e1b
+Completed prog1 run 19
+Completed prog1 run 0 at 0.10
+Completed prog1 run 1 at 0.10
+Completed prog1 run 2 at 0.10
+Completed prog1 run 0 at 0.15
+Completed prog1 run 1 at 0.15
+Completed prog1 run 2 at 0.15
+Completed prog1 run 0 at 0.20
+Completed prog1 run 1 at 0.20
+Completed prog1 run 2 at 0.20
+Completed prog1 run 0 at 0.25
+Completed prog1 run 1 at 0.25
+Completed prog1 run 2 at 0.25
+Completed prog1 run 0 at 0.30
+Completed prog1 run 1 at 0.30
+Completed prog1 run 2 at 0.30
+Completed prog1 run 0 at 0.35
+Completed prog1 run 1 at 0.35
+Completed prog1 run 2 at 0.35
+Completed prog1 run 0 at 0.40
+Completed prog1 run 1 at 0.40
+Completed prog1 run 2 at 0.40
+Completed prog1 run 0 at 0.45
+Completed prog1 run 1 at 0.45
+Completed prog1 run 2 at 0.45
+Completed prog1 run 0 at 0.50
+Completed prog1 run 1 at 0.50
+Completed prog1 run 2 at 0.50
+Completed prog1 run 0 at 0.55
+Completed prog1 run 1 at 0.55
+Completed prog1 run 2 at 0.55
+Completed prog1 run 0 at 0.60
+Completed prog1 run 1 at 0.60
+Completed prog1 run 2 at 0.60
+Completed prog1 run 0 at 0.65
+Completed prog1 run 1 at 0.65
+Completed prog1 run 2 at 0.65
+Completed prog1 run 0 at 0.70
+Completed prog1 run 1 at 0.70
+Completed prog1 run 2 at 0.70
+Completed prog1 run 0 at 0.75
+Completed prog1 run 1 at 0.75
+Completed prog1 run 2 at 0.75
+Completed prog1 run 0 at 0.80
+Completed prog1 run 1 at 0.80
+Completed prog1 run 2 at 0.80
+Completed prog1 run 0 at 0.85
+Completed prog1 run 1 at 0.85
+Completed prog1 run 2 at 0.85
+Completed prog1 run 0 at 0.90
+Completed prog1 run 1 at 0.90
+Completed prog1 run 2 at 0.90
+Completed prog1 run 0 at 0.95
+Completed prog1 run 1 at 0.95
+Completed prog1 run 2 at 0.95
+Completed prog1 run 0 at 1.00
+Completed prog1 run 1 at 1.00
+Completed prog1 run 2 at 1.00
+Completed prog1 run 0 at 1.05
+Completed prog1 run 1 at 1.05
+Completed prog1 run 2 at 1.05
+Completed prog1 run 0 at 1.10
+Completed prog1 run 1 at 1.10
+Completed prog1 run 2 at 1.10
+Completed prog1 run 0 at 1.15
+Completed prog1 run 1 at 1.15
+Completed prog1 run 2 at 1.15
+Completed prog1 run 0 at 1.20
+Completed prog1 run 1 at 1.20
+Completed prog1 run 2 at 1.20
+Completed prog1 run 0 at 15000
+Completed prog1 run 1 at 15000
+Completed prog1 run 2 at 15000
+Completed prog1 run 0 at 15100
+Completed prog1 run 1 at 15100
+Completed prog1 run 2 at 15100
+Completed prog1 run 0 at 15200
+Completed prog1 run 1 at 15200
+Completed prog1 run 2 at 15200
+Completed prog1 run 0 at 15300
+Completed prog1 run 1 at 15300
+Completed prog1 run 2 at 15300
+Completed prog1 run 0 at 15400
+Completed prog1 run 1 at 15400
+Completed prog1 run 2 at 15400
+Completed prog1 run 0 at 15500
+Completed prog1 run 1 at 15500
+Completed prog1 run 2 at 15500
+Completed prog1 run 0 at 15600
+Completed prog1 run 1 at 15600
+Completed prog1 run 2 at 15600
+Completed prog1 run 0 at 15700
+Completed prog1 run 1 at 15700
+Completed prog1 run 2 at 15700
+Completed prog1 run 0 at 15800
+Completed prog1 run 1 at 15800
+Completed prog1 run 2 at 15800
+Completed prog1 run 0 at 15900
+Completed prog1 run 1 at 15900
+Completed prog1 run 2 at 15900
+Completed prog1 run 0 at 16000
+Completed prog1 run 1 at 16000
+Completed prog1 run 2 at 16000
+Completed prog1 run 0 at 16100
+Completed prog1 run 1 at 16100
+Completed prog1 run 2 at 16100
+Completed prog1 run 0 at 16200
+Completed prog1 run 1 at 16200
+Completed prog1 run 2 at 16200
+Completed prog1 run 0 at 16300
+Completed prog1 run 1 at 16300
+Completed prog1 run 2 at 16300
+Completed prog1 run 0 at 16400
+Completed prog1 run 1 at 16400
+Completed prog1 run 2 at 16400
+Completed prog1 run 0 at 16500
+Completed prog1 run 1 at 16500
+Completed prog1 run 2 at 16500
+Completed prog1 run 0 at 16600
+Completed prog1 run 1 at 16600
+Completed prog1 run 2 at 16600
+Completed prog1 run 0 at 16700
+Completed prog1 run 1 at 16700
+Completed prog1 run 2 at 16700
+Completed prog1 run 0 at 16800
+Completed prog1 run 1 at 16800
+Completed prog1 run 2 at 16800
+Completed prog1 run 0 at 16900
+Completed prog1 run 1 at 16900
+Completed prog1 run 2 at 16900
+Completed prog1 run 0 at 17000
+Completed prog1 run 1 at 17000
+Completed prog1 run 2 at 17000
+Completed prog1 run 0 at 17100
+Completed prog1 run 1 at 17100
+Completed prog1 run 2 at 17100
+Completed prog1 run 0 at 17200
+Completed prog1 run 1 at 17200
+Completed prog1 run 2 at 17200
+Completed prog1 run 0 at 17300
+Completed prog1 run 1 at 17300
+Completed prog1 run 2 at 17300
+Completed prog1 run 0 at 17400
+Completed prog1 run 1 at 17400
+Completed prog1 run 2 at 17400
+Completed prog1 run 0 at 17500
+Completed prog1 run 1 at 17500
+Completed prog1 run 2 at 17500
+Completed prog1 run 0 at 17600
+Completed prog1 run 1 at 17600
+Completed prog1 run 2 at 17600
+Completed prog1 run 0 at 17700
+Completed prog1 run 1 at 17700
+Completed prog1 run 2 at 17700
+Completed prog1 run 0 at 17800
+Completed prog1 run 1 at 17800
+Completed prog1 run 2 at 17800
+Completed prog1 run 0 at 17900
+Completed prog1 run 1 at 17900
+Completed prog1 run 2 at 17900
+Completed prog1 run 0 at 18000
+Completed prog1 run 1 at 18000
+Completed prog1 run 2 at 18000
+Completed prog1 run 0 at 18100
+Completed prog1 run 1 at 18100
+Completed prog1 run 2 at 18100
+Completed prog1 run 0 at 18200
+Completed prog1 run 1 at 18200
+Completed prog1 run 2 at 18200
+Completed prog1 run 0 at 18300
+Completed prog1 run 1 at 18300
+Completed prog1 run 2 at 18300
+Completed prog1 run 0 at 18400
+Completed prog1 run 1 at 18400
+Completed prog1 run 2 at 18400
+Completed prog1 run 0 at 18500
+Completed prog1 run 1 at 18500
+Completed prog1 run 2 at 18500
+Completed prog1 run 0 at 18600
+Completed prog1 run 1 at 18600
+Completed prog1 run 2 at 18600
+Completed prog1 run 0 at 18700
+Completed prog1 run 1 at 18700
+Completed prog1 run 2 at 18700
+Completed prog1 run 0 at 18800
+Completed prog1 run 1 at 18800
+Completed prog1 run 2 at 18800
+Completed prog1 run 0 at 18900
+Completed prog1 run 1 at 18900
+Completed prog1 run 2 at 18900
+Completed prog1 run 0 at 19000
+Completed prog1 run 1 at 19000
+Completed prog1 run 2 at 19000
+Completed prog1 run 0 at 19100
+Completed prog1 run 1 at 19100
+Completed prog1 run 2 at 19100
+Completed prog1 run 0 at 19200
+Completed prog1 run 1 at 19200
+Completed prog1 run 2 at 19200
+Completed prog1 run 0 at 19300
+Completed prog1 run 1 at 19300
+Completed prog1 run 2 at 19300
+Completed prog1 run 0 at 19400
+Completed prog1 run 1 at 19400
+Completed prog1 run 2 at 19400
+Completed prog1 run 0 at 19500
+Completed prog1 run 1 at 19500
+Completed prog1 run 2 at 19500
+Completed prog1 run 0 at 19600
+Completed prog1 run 1 at 19600
+Completed prog1 run 2 at 19600
+Completed prog1 run 0 at 19700
+Completed prog1 run 1 at 19700
+Completed prog1 run 2 at 19700
+Completed prog1 run 0 at 19800
+Completed prog1 run 1 at 19800
+Completed prog1 run 2 at 19800
+Completed prog1 run 0 at 19900
+Completed prog1 run 1 at 19900
+Completed prog1 run 2 at 19900
+Completed prog1 run 0 at 20000
+Completed prog1 run 1 at 20000
+Completed prog1 run 2 at 20000
+Completed prog1 run 0 at 20100
+Completed prog1 run 1 at 20100
+Completed prog1 run 2 at 20100
+Completed prog1 run 0 at 20200
+Completed prog1 run 1 at 20200
+Completed prog1 run 2 at 20200
+Completed prog1 run 0 at 20300
+Completed prog1 run 1 at 20300
+Completed prog1 run 2 at 20300
+Completed prog1 run 0 at 20400
+Completed prog1 run 1 at 20400
+Completed prog1 run 2 at 20400
+Completed prog1 run 0 at 20500
+Completed prog1 run 1 at 20500
+Completed prog1 run 2 at 20500
+Completed prog1 run 0 at 20600
+Completed prog1 run 1 at 20600
+Completed prog1 run 2 at 20600
+Completed prog1 run 0 at 20700
+Completed prog1 run 1 at 20700
+Completed prog1 run 2 at 20700
+Completed prog1 run 0 at 20800
+Completed prog1 run 1 at 20800
+Completed prog1 run 2 at 20800
+Completed prog1 run 0 at 20900
+Completed prog1 run 1 at 20900
+Completed prog1 run 2 at 20900
+Completed prog1 run 0 at 21000
+Completed prog1 run 1 at 21000
+Completed prog1 run 2 at 21000
+Completed prog1 run 0 at 21100
+Completed prog1 run 1 at 21100
+Completed prog1 run 2 at 21100
+Completed prog1 run 0 at 21200
+Completed prog1 run 1 at 21200
+Completed prog1 run 2 at 21200
+Completed prog1 run 0 at 21300
+Completed prog1 run 1 at 21300
+Completed prog1 run 2 at 21300
+Completed prog1 run 0 at 21400
+Completed prog1 run 1 at 21400
+Completed prog1 run 2 at 21400
+Completed prog1 run 0 at 21500
+Completed prog1 run 1 at 21500
+Completed prog1 run 2 at 21500
+Completed prog1 run 0 at 21600
+Completed prog1 run 1 at 21600
+Completed prog1 run 2 at 21600
+Completed prog1 run 0 at 21700
+Completed prog1 run 1 at 21700
+Completed prog1 run 2 at 21700
+Completed prog1 run 0 at 21800
+Completed prog1 run 1 at 21800
+Completed prog1 run 2 at 21800
+Completed prog1 run 0 at 21900
+Completed prog1 run 1 at 21900
+Completed prog1 run 2 at 21900
+Completed prog1 run 0 at 22000
+Completed prog1 run 1 at 22000
+Completed prog1 run 2 at 22000
+Completed prog1 run 0 at 22100
+Completed prog1 run 1 at 22100
+Completed prog1 run 2 at 22100
+Completed prog1 run 0 at 22200
+Completed prog1 run 1 at 22200
+Completed prog1 run 2 at 22200
+Completed prog1 run 0 at 22300
+Completed prog1 run 1 at 22300
+Completed prog1 run 2 at 22300
+Completed prog1 run 0 at 22400
+Completed prog1 run 1 at 22400
+Completed prog1 run 2 at 22400
+Completed prog1 run 0 at 22500
+Completed prog1 run 1 at 22500
+Completed prog1 run 2 at 22500
+Completed prog1 run 0 at 22600
+Completed prog1 run 1 at 22600
+Completed prog1 run 2 at 22600
+Completed prog1 run 0 at 22700
+Completed prog1 run 1 at 22700
+Completed prog1 run 2 at 22700
+Completed prog1 run 0 at 22800
+Completed prog1 run 1 at 22800
+Completed prog1 run 2 at 22800
+Completed prog1 run 0 at 22900
+Completed prog1 run 1 at 22900
+Completed prog1 run 2 at 22900
+Completed prog1 run 0 at 23000
+Completed prog1 run 1 at 23000
+Completed prog1 run 2 at 23000
+Completed prog1 run 0 at 23100
+Completed prog1 run 1 at 23100
+Completed prog1 run 2 at 23100
+Completed prog1 run 0 at 23200
+Completed prog1 run 1 at 23200
+Completed prog1 run 2 at 23200
+Completed prog1 run 0 at 23300
+Completed prog1 run 1 at 23300
+Completed prog1 run 2 at 23300
+Completed prog1 run 0 at 23400
+Completed prog1 run 1 at 23400
+Completed prog1 run 2 at 23400
+Completed prog1 run 0 at 23500
+Completed prog1 run 1 at 23500
+Completed prog1 run 2 at 23500
+Completed prog1 run 0 at 23600
+Completed prog1 run 1 at 23600
+Completed prog1 run 2 at 23600
+Completed prog1 run 0 at 23700
+Completed prog1 run 1 at 23700
+Completed prog1 run 2 at 23700
+Completed prog1 run 0 at 23800
+Completed prog1 run 1 at 23800
+Completed prog1 run 2 at 23800
+Completed prog1 run 0 at 23900
+Completed prog1 run 1 at 23900
+Completed prog1 run 2 at 23900
+Completed prog1 run 0 at 24000
+Completed prog1 run 1 at 24000
+Completed prog1 run 2 at 24000
+Completed prog1 run 0 at 24100
+Completed prog1 run 1 at 24100
+Completed prog1 run 2 at 24100
+Completed prog1 run 0 at 24200
+Completed prog1 run 1 at 24200
+Completed prog1 run 2 at 24200
+Completed prog1 run 0 at 24300
+Completed prog1 run 1 at 24300
+Completed prog1 run 2 at 24300
+Completed prog1 run 0 at 24400
+Completed prog1 run 1 at 24400
+Completed prog1 run 2 at 24400
+Completed prog1 run 0 at 24500
+Completed prog1 run 1 at 24500
+Completed prog1 run 2 at 24500
+Completed prog1 run 0 at 24600
+Completed prog1 run 1 at 24600
+Completed prog1 run 2 at 24600
+Completed prog1 run 0 at 24700
+Completed prog1 run 1 at 24700
+Completed prog1 run 2 at 24700
+Completed prog1 run 0 at 24800
+Completed prog1 run 1 at 24800
+Completed prog1 run 2 at 24800
+Completed prog1 run 0 at 24900
+Completed prog1 run 1 at 24900
+Completed prog1 run 2 at 24900
+Completed prog1 run 0 at 25000
+Completed prog1 run 1 at 25000
+Completed prog1 run 2 at 25000
+Completed prog1 run 0 at 25100
+Completed prog1 run 1 at 25100
+Completed prog1 run 2 at 25100
+Completed prog1 run 0 at 25200
+Completed prog1 run 1 at 25200
+Completed prog1 run 2 at 25200
+Completed prog1 run 0 at 25300
+Completed prog1 run 1 at 25300
+Completed prog1 run 2 at 25300
+Completed prog1 run 0 at 25400
+Completed prog1 run 1 at 25400
+Completed prog1 run 2 at 25400
+Completed prog1 run 0 at 25500
+Completed prog1 run 1 at 25500
+Completed prog1 run 2 at 25500
+Completed prog1 run 0 at 25600
+Completed prog1 run 1 at 25600
+Completed prog1 run 2 at 25600
+Completed prog1 run 0 at 25700
+Completed prog1 run 1 at 25700
+Completed prog1 run 2 at 25700
+Completed prog1 run 0 at 25800
+Completed prog1 run 1 at 25800
+Completed prog1 run 2 at 25800
+Completed prog1 run 0 at 25900
+Completed prog1 run 1 at 25900
+Completed prog1 run 2 at 25900
+Completed prog1 run 0 at 26000
+Completed prog1 run 1 at 26000
+Completed prog1 run 2 at 26000
+Completed prog1 run 0 at 26100
+Completed prog1 run 1 at 26100
+Completed prog1 run 2 at 26100
+Completed prog1 run 0 at 26200
+Completed prog1 run 1 at 26200
+Completed prog1 run 2 at 26200
+Completed prog1 run 0 at 26300
+Completed prog1 run 1 at 26300
+Completed prog1 run 2 at 26300
+Completed prog1 run 0 at 26400
+Completed prog1 run 1 at 26400
+Completed prog1 run 2 at 26400
+Completed prog1 run 0 at 26500
+Completed prog1 run 1 at 26500
+Completed prog1 run 2 at 26500
+Completed prog1 run 0 at 26600
+Completed prog1 run 1 at 26600
+Completed prog1 run 2 at 26600
+Completed prog1 run 0 at 26700
+Completed prog1 run 1 at 26700
+Completed prog1 run 2 at 26700
+Completed prog1 run 0 at 26800
+Completed prog1 run 1 at 26800
+Completed prog1 run 2 at 26800
+Completed prog1 run 0 at 26900
+Completed prog1 run 1 at 26900
+Completed prog1 run 2 at 26900
+Completed prog1 run 0 at 27000
+Completed prog1 run 1 at 27000
+Completed prog1 run 2 at 27000
+Completed prog1 run 0 at 27100
+Completed prog1 run 1 at 27100
+Completed prog1 run 2 at 27100
+Completed prog1 run 0 at 27200
+Completed prog1 run 1 at 27200
+Completed prog1 run 2 at 27200
+Completed prog1 run 0 at 27300
+Completed prog1 run 1 at 27300
+Completed prog1 run 2 at 27300
+Completed prog1 run 0 at 27400
+Completed prog1 run 1 at 27400
+Completed prog1 run 2 at 27400
+Completed prog1 run 0 at 27500
+Completed prog1 run 1 at 27500
+Completed prog1 run 2 at 27500
+Completed prog1 run 0 at 27600
+Completed prog1 run 1 at 27600
+Completed prog1 run 2 at 27600
+Completed prog1 run 0 at 27700
+Completed prog1 run 1 at 27700
+Completed prog1 run 2 at 27700
+Completed prog1 run 0 at 27800
+Completed prog1 run 1 at 27800
+Completed prog1 run 2 at 27800
+Completed prog1 run 0 at 27900
+Completed prog1 run 1 at 27900
+Completed prog1 run 2 at 27900
+Completed prog1 run 0 at 28000
+Completed prog1 run 1 at 28000
+Completed prog1 run 2 at 28000
+Completed prog1 run 0 at 28100
+Completed prog1 run 1 at 28100
+Completed prog1 run 2 at 28100
+Completed prog1 run 0 at 28200
+Completed prog1 run 1 at 28200
+Completed prog1 run 2 at 28200
+Completed prog1 run 0 at 28300
+Completed prog1 run 1 at 28300
+Completed prog1 run 2 at 28300
+Completed prog1 run 0 at 28400
+Completed prog1 run 1 at 28400
+Completed prog1 run 2 at 28400
+Completed prog1 run 0 at 28500
+Completed prog1 run 1 at 28500
+Completed prog1 run 2 at 28500
+Completed prog1 run 0 at 28600
+Completed prog1 run 1 at 28600
+Completed prog1 run 2 at 28600
+Completed prog1 run 0 at 28700
+Completed prog1 run 1 at 28700
+Completed prog1 run 2 at 28700
+Completed prog1 run 0 at 28800
+Completed prog1 run 1 at 28800
+Completed prog1 run 2 at 28800
+Completed prog1 run 0 at 28900
+Completed prog1 run 1 at 28900
+Completed prog1 run 2 at 28900
+Completed prog1 run 0 at 29000
+Completed prog1 run 1 at 29000
+Completed prog1 run 2 at 29000
+Completed prog1 run 0 at 29100
+Completed prog1 run 1 at 29100
+Completed prog1 run 2 at 29100
+Completed prog1 run 0 at 29200
+Completed prog1 run 1 at 29200
+Completed prog1 run 2 at 29200
+Completed prog1 run 0 at 29300
+Completed prog1 run 1 at 29300
+Completed prog1 run 2 at 29300
+Completed prog1 run 0 at 29400
+Completed prog1 run 1 at 29400
+Completed prog1 run 2 at 29400
+Completed prog1 run 0 at 29500
+Completed prog1 run 1 at 29500
+Completed prog1 run 2 at 29500
+Completed prog1 run 0 at 29600
+Completed prog1 run 1 at 29600
+Completed prog1 run 2 at 29600
+Completed prog1 run 0 at 29700
+Completed prog1 run 1 at 29700
+Completed prog1 run 2 at 29700
+Completed prog1 run 0 at 29800
+Completed prog1 run 1 at 29800
+Completed prog1 run 2 at 29800
+Completed prog1 run 0 at 29900
+Completed prog1 run 1 at 29900
+Completed prog1 run 2 at 29900
+Completed prog1 run 0 at 30000
+Completed prog1 run 1 at 30000
+Completed prog1 run 2 at 30000
+Copying /var/lib/containers/storage/volumes/prog1/_data/{run_stats, container_log}  ---> /results/prog1

@@ -1,0 +1,119 @@
+STEP 1/8: FROM almalinux:latest
+STEP 2/8: ARG program_file_name
+--> 4afcf9d8b862
+STEP 3/8: ENV PROGRAM_FILE_NAME $program_file_name
+--> 6d8794c9327f
+STEP 4/8: ARG file_to_modify_path
+--> d92917151b7e
+STEP 5/8: ENV FILE_TO_MODIFY_PATH $file_to_modify_path
+--> c3c6c2037a02
+STEP 6/8: COPY ./programs/$program_file_name /
+--> 2bfbf7294531
+STEP 7/8: RUN chmod +x /$program_file_name
+--> 0ebc9b00d745
+STEP 8/8: CMD ["bash", "-c", "./${PROGRAM_FILE_NAME} ${FILE_TO_MODIFY_PATH}"]
+COMMIT program.image
+--> 3a9c67cae764
+Successfully tagged localhost/program.image:latest
+3a9c67cae764a189ed4ccf28ef519f307dd7edceaa22d16ecf780dc7af1191ca
+cbc45af0f26862522a32e9aff96fdc7671f7152c1bb5d5c6f2c59f2843f8c9a8
+Completed test run 0
+64a348780f17de9c3a707d816f90c2ebe74199284fcf1da138eaf4b70a8d8c49
+Completed test run 1
+dde9c8dc762f2d687243f198c5e2a50966b5b89c046cf4685c5fa0401047c6fc
+Completed test run 2
+f1c7bca777ba9eb0d7cb4b19b8884b12f6a6c164c2a5a97780f159c7f42f20f4
+Completed test run 3
+1586ec44d0b0e12e0936d013b785f1929dfc91ad77a40b040dfe89adcbd8aa8a
+Completed test run 4
+6fd0236b37e35cd4d4012a0b523fe050c87c32e960d72b78e9a7ee504a169757
+Completed test run 5
+436de3b7c72ed19069f9ef900a087ec01a7c8fce16bf78a93f84ec2bf1f095d7
+Completed test run 6
+3c1814d4a398621593aecca1067c78ff64a8b1c23a6cf28b5983fe6992c12215
+Completed test run 7
+a247bc553528a046e98e79c7df9b0c8f67bfa34beaac971c5e06a573e96556d7
+Completed test run 8
+5360fa3b62f047715ab0b4cd48666bcf515301f4ca555027bf5ea78796888a94
+Completed test run 9
+a3fa392671b26aa9555268a00d69ddfe5447a4f90d50728d1bd43bf1d2a8870f
+Completed test run 10
+6eb5a08ef4054a84988f2c1b988bd3110cbd1c1edcd334f7fb2a10067412b5c1
+Completed test run 11
+18406d52d0d083752994995d00ac172b47fb57fef58a452192299a78200e36ee
+Completed test run 12
+ea244db94e94b3e2db20d08cb36575436c75c25e6b574a23a13ddb7099a8a559
+Completed test run 13
+2bcf8a29212809a02e028750af96c0c9747625cf00fa5d9a1ba2c8777dbd1bde
+Completed test run 14
+e9dcd4a3dd8b13fb2282242b1f20aaa24ba332b8355baf9b91ba1bd8dd9023ff
+Completed test run 15
+e6e92b86cefea30ff83928bbf3384f973bdf02dd0069c8505340493832f84962
+Completed test run 16
+29650deda36533a8c2a436e6ad0c4374a5f461860043865f0868eb551a00e97d
+Completed test run 17
+17a66798e8edabeb5da9059c502bab382ed6b36a5caf7ddf29317955b80158a7
+Completed test run 18
+130ac706eebfdc6c82fd32df6326795b378a2391f02902f80008afaf0f74bc2c
+Completed test run 19
+Completed test run 0 at 0.80
+Completed test run 1 at 0.80
+Completed test run 2 at 0.80
+Completed test run 0 at 0.85
+Completed test run 1 at 0.85
+Completed test run 2 at 0.85
+Completed test run 0 at 0.90
+Completed test run 1 at 0.90
+Completed test run 2 at 0.90
+Completed test run 0 at 0.95
+Completed test run 1 at 0.95
+Completed test run 2 at 0.95
+Completed test run 0 at 1.00
+Completed test run 1 at 1.00
+Completed test run 2 at 1.00
+Completed test run 0 at 1.05
+Completed test run 1 at 1.05
+Completed test run 2 at 1.05
+Completed test run 0 at 1.10
+Completed test run 1 at 1.10
+Completed test run 2 at 1.10
+Completed test run 0 at 1.15
+Completed test run 1 at 1.15
+Completed test run 2 at 1.15
+Completed test run 0 at 1.20
+Completed test run 1 at 1.20
+Completed test run 2 at 1.20
+Completed test run 0 at 1.25
+Completed test run 1 at 1.25
+Completed test run 2 at 1.25
+Completed test run 0 at 1.30
+Completed test run 1 at 1.30
+Completed test run 2 at 1.30
+Completed test run 0 at 200
+Completed test run 1 at 200
+Completed test run 2 at 200
+Completed test run 0 at 300
+Completed test run 1 at 300
+Completed test run 2 at 300
+Completed test run 0 at 400
+Completed test run 1 at 400
+Completed test run 2 at 400
+Completed test run 0 at 500
+Completed test run 1 at 500
+Completed test run 2 at 500
+Completed test run 0 at 600
+Completed test run 1 at 600
+Completed test run 2 at 600
+Completed test run 0 at 700
+Completed test run 1 at 700
+Completed test run 2 at 700
+Completed test run 0 at 800
+Completed test run 1 at 800
+Completed test run 2 at 800
+Completed test run 0 at 900
+Completed test run 1 at 900
+Completed test run 2 at 900
+Completed test run 0 at 1000
+Completed test run 1 at 1000
+Completed test run 2 at 1000
+Copying /var/lib/containers/storage/volumes/test/_data/{run_stats, container_log}  ---> /results/test

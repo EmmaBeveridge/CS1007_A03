@@ -1,8 +1,0 @@
-FROM almalinux:latest
-ARG program_file_name
-ENV PROGRAM_FILE_NAME $program_file_name
-ARG file_to_modify_path
-ENV FILE_TO_MODIFY_PATH $file_to_modify_path
-COPY ./programs/$program_file_name /
-RUN chmod +x /$program_file_name
-CMD ["bash", "-c", "./${PROGRAM_FILE_NAME} ${FILE_TO_MODIFY_PATH}"]

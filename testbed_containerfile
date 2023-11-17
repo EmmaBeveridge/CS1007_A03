@@ -2,4 +2,20 @@ FROM almalinux:latest
 RUN dnf install podman -y
 RUN dnf install jq -y
 RUN yum install procps -y 
-CMD bash /volume/testbed.sh
+RUN yum install bc -y
+ARG time_series
+ENV TIME_SERIES $time_series
+ARG cpu_upper
+ENV CPU_UPPER $cpu_upper
+ARG cpu_lower
+ENV CPU_LOWER $cpu_lower
+ARG cpu_increment
+ENV CPU_INCREMENT=$cpu_increment
+ARG ram_lower
+ENV RAM_LOWER=$ram_lower
+ARG ram_upper
+ENV RAM_UPPER=$ram_upper
+ARG ram_increment
+ENV RAM_INCREMENT=$ram_increment
+
+CMD ["bash", "-c", "/volume/testbed.sh ${TIME_SERIES}${CPU_UPPER}${CPU_LOWER}${CPU_INCREMENT}${RAM_LOWER}${RAM_UPPER}${RAM_INCREMENT}"]
